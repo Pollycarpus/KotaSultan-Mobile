@@ -27,6 +27,5 @@ public class DisplayInputActivity extends AppCompatActivity {
         textView2.setText(message2);
         textView3.setText(message3);
         textView4.setText(coinVal);
-
     }
 }

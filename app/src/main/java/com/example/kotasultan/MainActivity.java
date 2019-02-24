@@ -12,10 +12,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        android.support.v7.widget.Toolbar toolbar =
-                findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
         // Create an instance of the tab layout from the view.
         TabLayout tabLayout = findViewById(R.id.tabLayout);
 
