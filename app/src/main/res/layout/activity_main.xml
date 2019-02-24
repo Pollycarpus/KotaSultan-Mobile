@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.constraint.ConstraintLayout
         android:id="@+id/ConstraintLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -145,6 +145,37 @@
             android:text="Pemasukan"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/button_pengeluaran" />
+
+        <Button
+            android:id="@+id/button_currency"
+            android:layout_width="153dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:text="Mata uang saya"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="IDR"
+            app:layout_constraintStart_toEndOf="@+id/editValuePemasukan"
+            tools:layout_editor_absoluteY="426dp" />
+
+        <TextView
+            android:id="@+id/currency2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:text="IDR"
+            app:layout_constraintStart_toEndOf="@+id/editValuePengeluaran"
+            tools:layout_editor_absoluteY="152dp" />
 
     </android.support.constraint.ConstraintLayout>
 
