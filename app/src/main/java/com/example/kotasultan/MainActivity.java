@@ -1,82 +1,50 @@
 package com.example.kotasultan;
 
-import android.content.Intent;
+import android.support.design.widget.TabLayout;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-
-    public static final String EXTRA_MESSAGE1 = "Nama";
-    public static final String EXTRA_MESSAGE2 = "Nilai";
-    public static final String EXTRA_MESSAGE3 = "Tanggal";
-    public static final String EXTRA_MESSAGE4 = "Koin";
-
-    private  EditText editPengeluaran;
-    private  EditText editValuePengeluaran;
-    private  EditText editDatePengeluaran;
-    private  EditText editPemasukan;
-    private  EditText editValuePemasukan;
-    private  EditText editDatePemasukan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editPengeluaran = (EditText) findViewById(R.id.editPengeluaran);
-        editValuePengeluaran = (EditText) findViewById(R.id.editValuePengeluaran);
-        editDatePengeluaran = (EditText) findViewById(R.id.editDatePengeluaran);
+        android.support.v7.widget.Toolbar toolbar =
+                findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
-        editPemasukan = (EditText) findViewById(R.id.editPemasukan);
-        editValuePemasukan = (EditText) findViewById(R.id.editValuePemasukan);
-        editDatePemasukan = (EditText) findViewById(R.id.editDatePemasukan);
-    }
+        // Create an instance of the tab layout from the view.
+        TabLayout tabLayout = findViewById(R.id.tabLayout);
 
-    public void sendPengeluaran(View view) {
-        Intent intent = new Intent(this, DisplayInputActivity.class);
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label1));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label2));
+        tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label3));
 
-        String message1 = editPengeluaran.getText().toString();
-        String message2 = editValuePengeluaran.getText().toString();
-        String message3 = editDatePengeluaran.getText().toString();
-        long nilai = Long.parseLong(message2);
-        long coinVal = convertToCoin(nilai);
-        String message4 = Long.toString(coinVal);
+        tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
-        intent.putExtra(EXTRA_MESSAGE1, message1);
-        intent.putExtra(EXTRA_MESSAGE2, message2);
-        intent.putExtra(EXTRA_MESSAGE3, message3);
-        intent.putExtra(EXTRA_MESSAGE4, message4);
+        final ViewPager viewPager = findViewById(R.id.pager);
+        final PagerAdapter adapter = new PagerAdapter
+                (getSupportFragmentManager(), tabLayout.getTabCount());
+        viewPager.setAdapter(adapter);
 
-        startActivity(intent);
-    }
+        viewPager.addOnPageChangeListener(new
+                TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+           @Override
+           public void onTabSelected(TabLayout.Tab tab) {
+               viewPager.setCurrentItem(tab.getPosition());
+           }
 
-    public void sendPemasukan(View view) {
-        Intent intent = new Intent(this, DisplayInputActivity.class);
+           @Override
+           public void onTabUnselected(TabLayout.Tab tab) {
+           }
 
-        String message1 = editPemasukan.getText().toString();
-        String message2 = editValuePemasukan.getText().toString();
-        String message3 = editDatePemasukan.getText().toString();
-        long nilai = Long.parseLong(message2);
-        long coinVal = convertToCoin(nilai);
-        String message4 = Long.toString(coinVal);
-
-        intent.putExtra(EXTRA_MESSAGE1, message1);
-        intent.putExtra(EXTRA_MESSAGE2, message2);
-        intent.putExtra(EXTRA_MESSAGE3, message3);
-        intent.putExtra(EXTRA_MESSAGE4, message4);
-
-        startActivity(intent);
-    }
-
-    public long convertToCoin(long number){
-        int max = 1000;
-
-        if (number / 100 > max){
-            return max;
-        }else{
-            return number / 100;
-        }
+           @Override
+           public void onTabReselected(TabLayout.Tab tab) {
+           }
+       });
     }
 }

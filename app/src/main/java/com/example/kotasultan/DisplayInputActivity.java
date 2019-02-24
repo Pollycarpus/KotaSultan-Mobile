@@ -13,10 +13,10 @@ public class DisplayInputActivity extends AppCompatActivity {
         setContentView(R.layout.activity_display_input);
 
         Intent intent = getIntent();
-        String message1 = intent.getStringExtra(MainActivity.EXTRA_MESSAGE1);
-        String message2 = intent.getStringExtra(MainActivity.EXTRA_MESSAGE2);
-        String message3 = intent.getStringExtra(MainActivity.EXTRA_MESSAGE3);
-        String coinVal = intent.getStringExtra(MainActivity.EXTRA_MESSAGE4);
+        String message1 = intent.getStringExtra(Catatanku.EXTRA_MESSAGE1);
+        String message2 = intent.getStringExtra(Catatanku.EXTRA_MESSAGE2);
+        String message3 = intent.getStringExtra(Catatanku.EXTRA_MESSAGE3);
+        String coinVal = intent.getStringExtra(Catatanku.EXTRA_MESSAGE4);
 
         TextView textView1 = findViewById(R.id.textView1);
         TextView textView2 = findViewById(R.id.textView2);
