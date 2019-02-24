@@ -21,7 +21,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="text"
-            android:text="Nama Pengeluaran"
+            android:hint="Nama Pengeluaran"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewPengeluaran" />
 
@@ -56,7 +56,7 @@
             android:layout_marginTop="9dp"
             android:ems="10"
             android:inputType="number"
-            android:text="Nilai"
+            android:hint="Nilai"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editPengeluaran" />
 
@@ -69,7 +69,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="date"
-            android:text="DD/MM/YYYY"
+            android:hint="MM/DD/YYYY"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editValuePengeluaran" />
 
@@ -82,7 +82,7 @@
             android:layout_marginTop="8dp"
             android:ems="10"
             android:inputType="text"
-            android:text="Nama Pemasukan"
+            android:hint="Nama Pemasukan"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textViewPemasukan" />
 
@@ -95,7 +95,7 @@
             android:layout_marginTop="12dp"
             android:ems="10"
             android:inputType="number"
-            android:text="Nilai"
+            android:hint="Nilai"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editPemasukan" />
 
@@ -108,7 +108,7 @@
             android:layout_marginTop="12dp"
             android:ems="10"
             android:inputType="date"
-            android:text="DD/MM/YYYY"
+            android:hint="MM/DD/YYYY"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editValuePemasukan" />
 
