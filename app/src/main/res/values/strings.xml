@@ -6,4 +6,6 @@
     <string name="tab_label1">Catatanku</string>
     <string name="tab_label2">Riwayat</string>
     <string name="tab_label3">Shake to Win</string>
+    <string name="coin_image">Coin image</string>
+    <string name="shake_text">Shake your phone!</string>
 </resources>
