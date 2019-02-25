@@ -1,0 +1,143 @@
+{
+  "project_info": {
+    "project_number": "702409216297",
+    "firebase_url": "https://kotasultan-android.firebaseio.com",
+    "project_id": "kotasultan-android",
+    "storage_bucket": "kotasultan-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702409216297:android:2995378bfae7639f",
+        "android_client_info": {
+          "package_name": "com.application.example.kotasultanappcenter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702409216297-68f9retrk5d4luk2cc4c0rd24q1p52ug.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.application.example.kotasultanappcenter",
+            "certificate_hash": "ff1cfc1dbb002d798196f3ea5ec694f13de7a9b7"
+          }
+        },
+        {
+          "client_id": "702409216297-eb61kao7rps4lrbho9jgjksu6utf3vkr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDccOdhjhfayCWuWQlSY9WceMAWJGmQweI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702409216297-eb61kao7rps4lrbho9jgjksu6utf3vkr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702409216297:android:690677d874765207",
+        "android_client_info": {
+          "package_name": "com.example.kotasultan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702409216297-f75fg5tuhkpehnssa8dbb9gdnemqrdnl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kotasultan",
+            "certificate_hash": "ff1cfc1dbb002d798196f3ea5ec694f13de7a9b7"
+          }
+        },
+        {
+          "client_id": "702409216297-eb61kao7rps4lrbho9jgjksu6utf3vkr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDccOdhjhfayCWuWQlSY9WceMAWJGmQweI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702409216297-eb61kao7rps4lrbho9jgjksu6utf3vkr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:702409216297:android:ffc3f80ee666e36a",
+        "android_client_info": {
+          "package_name": "com.rahmatdeveloperios.kotasultan"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "702409216297-j3arllgcc4tavgka3jtjuapiqc7ku7hu.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rahmatdeveloperios.kotasultan",
+            "certificate_hash": "ff1cfc1dbb002d798196f3ea5ec694f13de7a9b7"
+          }
+        },
+        {
+          "client_id": "702409216297-eb61kao7rps4lrbho9jgjksu6utf3vkr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDccOdhjhfayCWuWQlSY9WceMAWJGmQweI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "702409216297-eb61kao7rps4lrbho9jgjksu6utf3vkr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
