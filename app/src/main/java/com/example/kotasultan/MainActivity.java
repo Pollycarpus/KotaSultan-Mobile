@@ -1,13 +1,17 @@
 package com.example.kotasultan;
 
+import android.content.Context;
 import android.content.Intent;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
@@ -15,6 +19,8 @@ import android.widget.LinearLayout;
 public class MainActivity extends AppCompatActivity {
 
     public static String Uid;
+    private FloatingActionButton fab;
+    private SharedPreferences myPrefs;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +42,25 @@ public class MainActivity extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText(R.string.tab_label3));
 
         tabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
+
+
+        myPrefs = getApplicationContext().getSharedPreferences("prefTheme", Context.MODE_PRIVATE);
+        boolean check = myPrefs.getBoolean("prefKey", false);
+
+        // Set Setting Button
+        fab = findViewById(R.id.settingButton);
+        fab.setOnClickListener(
+          new View.OnClickListener() {
+              @Override
+              public void onClick(View v) {
+                  startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
+              }
+          }
+        );
+        if (!check) {
+
+
+        }
 
         final ViewPager viewPager = findViewById(R.id.pager);
         final PagerAdapter adapter = new PagerAdapter
