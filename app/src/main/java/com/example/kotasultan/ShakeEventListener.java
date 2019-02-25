@@ -26,10 +26,10 @@ public class ShakeEventListener implements SensorEventListener {
     private float lastY = 0;
     private float lastZ = 0;
 
-    private static boolean shakeAvailable = true;
+    private static int countShake = 0;
 
     public static boolean getShakeAvailable() {
-        return shakeAvailable;
+        return (countShake == 0);
     }
 
     /** OnShakeListener that is called when shake is detected. */
@@ -87,10 +87,10 @@ public class ShakeEventListener implements SensorEventListener {
                     // check total duration
                     long totalDuration = now - mFirstDirectionChangeTime;
                     if (totalDuration >= MIN_TOTAL_DURATION_OF_SHAKE) {
-                        if (shakeAvailable) {
+                        if (countShake == 0) {
                             mShakeListener.onShake();
                             resetShakeParameters();
-                            shakeAvailable = false;
+                            countShake++;
                         }
                     }
                 }
@@ -108,7 +108,6 @@ public class ShakeEventListener implements SensorEventListener {
         lastX = 0;
         lastY = 0;
         lastZ = 0;
-        shakeAvailable = false;
     }
 
     @Override
