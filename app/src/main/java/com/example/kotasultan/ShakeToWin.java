@@ -37,6 +37,8 @@ public class ShakeToWin extends Fragment {
 
     private ShakeEventListener mSensorListener;
 
+    private ShakeEventListener mGyroListener;
+
     public ShakeToWin() {
         // Required empty public constructor
     }
@@ -53,6 +55,7 @@ public class ShakeToWin extends Fragment {
 
         mSensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
         mSensorListener = new ShakeEventListener();
+        mGyroListener = new ShakeEventListener();
 
         mSensorListener.setOnShakeListener(new ShakeEventListener.OnShakeListener() {
 
@@ -105,6 +108,13 @@ public class ShakeToWin extends Fragment {
                 }
             }
 
+        });
+
+        mGyroListener.setOnShakeListener(new ShakeEventListener.OnShakeListener() {
+            @Override
+            public void onShake() {
+                Log.d("Gyro", "Active");
+            }
         });
 
         // Inflate the layout for this fragment
