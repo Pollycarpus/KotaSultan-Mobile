@@ -6,6 +6,7 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
@@ -57,9 +58,8 @@ public class MainActivity extends AppCompatActivity {
               }
           }
         );
-        if (!check) {
-
-
+        if (check) {
+            tabLayout.setBackgroundColor(Color.RED);
         }
 
         final ViewPager viewPager = findViewById(R.id.pager);

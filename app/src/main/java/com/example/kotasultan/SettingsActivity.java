@@ -37,5 +37,6 @@ public class SettingsActivity extends AppCompatActivity implements CompoundButto
         } else {
             editor.putBoolean("prefKey", false);
         }
+        editor.commit();
     }
 }

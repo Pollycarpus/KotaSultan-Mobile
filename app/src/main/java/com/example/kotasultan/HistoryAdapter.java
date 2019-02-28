@@ -19,11 +19,11 @@ public class HistoryAdapter extends RecyclerView.Adapter<HistoryAdapter.HistoryV
     public HistoryAdapter(){
         mData = new ArrayList<>();
         Map<String,Object> element = new HashMap<>();
-        element.put("nama","empty");
-        element.put("jenis","empty");
-        element.put("nilai","empty");
-        element.put("currency","empty");
-        element.put("tanggal","empty");
+        element.put("nama","");
+        element.put("jenis","");
+        element.put("nilai","");
+        element.put("currency","");
+        element.put("tanggal","");
         mData.add(element);
     }
 
